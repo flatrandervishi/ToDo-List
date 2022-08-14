@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Log In/Sign Up</title>
+    <style></style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="upper">
+        <button id="loginButton" onclick="logIn()" class="buttons active">
+          Log In
+        </button>
+        <!-- <label>|</label> -->
+        <button id="signupButton" onclick="signUp()" class="buttons">
+          Sign Up
+        </button>
+      </div>
+
+      <form class="forma1" id="forma1" method="post" action="login.php">
+        <p class="upper-text">Please Log in into your account!</p>
+        <input type="email" placeholder="Email" name="email" />
+        <input type="password" placeholder="Password" name="password" />
+        <input class="active" type="submit" value="Login" name="logIn" />
+      </form>
+
+      <form
+        class="forma2"
+        id="forma2"
+        style="display: none"
+        method="post"
+        action="signup.php"
+      >
+        <p class="upper-text">Create New account!</p>
+        <input type="text" placeholder="Name" name="firstName" />
+        <input type="text" placeholder="Surname" name="lastName" />
+        <input type="email" placeholder="Email" name="email" />
+        <input type="password" placeholder="Password" name="password" />
+        <input class="active" type="submit" value="SignUp" name="signUp" />
+      </form>
+    </div>
+
+    <script>
+      const logInButton = document.getElementById("loginButton");
+      const signUpButton = document.getElementById("signupButton");
+      const logInForm = document.getElementById("forma1");
+      const signUpForm = document.getElementById("forma2");
+
+      function logIn() {
+        logInForm.style.display = "flex";
+        signUpForm.style.display = "none";
+        logInButton.classList.add("active");
+        signUpButton.classList.remove("active");
+      }
+
+      function signUp() {
+        logInForm.style.display = "none";
+        signUpForm.style.display = "flex";
+        logInButton.classList.remove("active");
+        signUpButton.classList.add("active");
+      }
+    </script>
+  </body>
+</html>

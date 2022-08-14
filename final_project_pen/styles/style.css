@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  font-family: "fontImp";
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "fontImp";
+  src: url(../font/CaviarDreams.ttf);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "fontImp";
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, rgb(108, 108, 222), rgb(230, 108, 108));
+}
+
+.container {
+  width: min(45rem, 90%);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 10px rgb(96, 94, 94);
+}
+
+.upper {
+  text-align: center;
+}
+
+.upper-text {
+  font-size: 1.5rem;
+}
+
+.forma1,
+.forma2 {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  padding: 1em;
+  margin: 1rem;
+  border: 0.5px solid rgb(161, 161, 161);
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.buttons {
+  padding: 1rem 5rem;
+  border: 0.5px solid rgb(161, 161, 161);
+  border-radius: 1rem;
+}
+
+.buttons:hover {
+  background-color: rgb(204, 203, 202);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.active {
+  border: 2px solid rgb(242, 85, 245);
+}
+
+.buttons:hover,
+.active:hover {
+  background-color: rgb(242, 85, 245);
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
